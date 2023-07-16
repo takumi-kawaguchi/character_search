@@ -9,7 +9,7 @@ services:
       /bin/bash -c "
         pwd
         /bin/bash
-      "  
+        && go run main.go"
     ports:
       - "8080:8080"
     volumes:
