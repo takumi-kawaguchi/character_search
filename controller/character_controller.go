@@ -1,19 +1,16 @@
 package controller
 
 import (
+	"character_search/model"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
-type Character struct {
-	ID   int    `json:"id"`
-	Name string `json:"name"`
-}
-
-var characters = []Character{
-	{ID: 1, Name: "test"},
-	{ID: 2, Name: "test2"},
+var characters = []model.Character{
+	{Name: "アドマイヤベガ"},
+	{Name: "キングヘイロー"},
+	{Name: "ナリタブライアン"},
 }
 
 func GetCharacters(c *gin.Context) {
